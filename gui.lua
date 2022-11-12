@@ -33,9 +33,11 @@ end)
 
 Webhook:NewToggle("Basic", "Click to get notified when you hatch a Basic Pet", function(state)
     if state then
-        print("pingas")
+        _G.TrackList = {
+   ['Basic'] = true;
     else
-        print("pingas")
+        _G.TrackList = {
+   ['Basic'] = false;
     end
 end)
 		
