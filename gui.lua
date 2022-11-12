@@ -7,7 +7,7 @@ local AutoFarmSection = AutoFarm:NewSection("AutoFarm")
 
 AutoFarmSection:NewToggle("Auto Collect orbs", "Teleport all the orbs to you", function(state)
     if state then
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/PoloISFAT/FuzeHub/main/autocollect?token=GHSAT0AAAAAAB3CE227ZQHN44Q25VZPKKXWY3PZUKA"))()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/PoloISFAT/FuzeHub/main/autocollect"))()
     else
         loadstring(game:HttpGet("https://raw.githubusercontent.com/PoloISFAT/FuzeHub/main/disableautocollect?token=GHSAT0AAAAAAB3CE226JOK3L2JJRELUZEQMY3PZU5Q"))()
     end
