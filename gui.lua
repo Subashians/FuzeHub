@@ -2,8 +2,6 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/PoloISFAT/FuzeHub/main/library"))()
 local Window = Library.CreateLib("Fuze Hub", "DarkTheme")
 
-local basic = true
-
 local AutoFarm = Window:NewTab("AutoFarm")
 local AutoFarmSection = AutoFarm:NewSection("AutoFarm")
 
@@ -28,6 +26,7 @@ end)
 
 local Webhook = Window:NewTab("Webhook")
 local Webhook = Webhook:NewSection("Discord Notification when Hatch")
+local basic = false
 
 Webhook:NewButton("Click the rarity you want to be notified when you hatch and enter your discord webhook", "click enter to enter the webhook", function()
     print("e")
