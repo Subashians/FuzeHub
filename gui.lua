@@ -27,13 +27,6 @@ end)
 
 
 local Webhook = Window:NewTab("Webhook")
-local Help = Help:NewSection("Help")
-
-Help:NewButton("Click the rarity you want to be notified when you hatch and enter your discord webhook", "click enter to enter the webhook", function()
-    print("e")
-end)
-
-
 local Webhook = Webhook:NewSection("Webhook")
 
 Webhook:NewTextBox("Paste your Discord Webhook", "Paste here", function(txt)
