@@ -33,17 +33,17 @@ end)
 
 Webhook:NewToggle("Basic", "Click to get notified when you hatch a Basic Pet", function(state)
     if state then
-        _G.TrackList = {
-   ['Basic'] = basic;
-}
+        basic = true
     else
-        _G.TrackList = {
-   ['Basic'] = basic;
-}
+        basic = false
     end
 end)
 		
 Webhook:NewTextBox("Paste your Discord Webhook", "Paste here", function(txt)
 	_G.Webhook = txt
+	_G.TrackList = {
+   	['Basic'] = basic;
+}
+		
 	loadstring(game:HttpGet('https://pastebin.com/raw/H9DyZWys'))()
 end)
