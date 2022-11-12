@@ -27,6 +27,11 @@ end)
 local Webhook = Window:NewTab("Webhook")
 local Webhook = Webhook:NewSection("Discord Notification when Hatch")
 local basic = false
+local rare = false
+local epic = false
+local legendary = false
+local mythical = false
+local exclusive = false
 
 Webhook:NewButton("Click the rarity you want to be notified when you hatch and enter your discord webhook", "click enter to enter the webhook", function()
     print("e")
@@ -39,16 +44,56 @@ Webhook:NewToggle("Basic", "Click to get notified when you hatch a Basic Pet", f
         basic = false
     end
 end)
-		
+
+Webhook:NewToggle("Rare", "Click to get notified when you hatch a Rare Pet", function(state)
+    if state then
+        rare = true
+    else
+        rare = false
+    end
+end)
+
+Webhook:NewToggle("Epic", "Click to get notified when you hatch an Epic Pet", function(state)
+    if state then
+        epic = true
+    else
+        epic = false
+    end
+end)
+
+Webhook:NewToggle("Legendary", "Click to get notified when you hatch a Legendary Pet", function(state)
+    if state then
+        legendary = true
+    else
+        legendary = false
+    end
+end)
+
+Webhook:NewToggle("Mythical", "Click to get notified when you hatch a Mythical Pet", function(state)
+    if state then
+        mythical = true
+    else
+        mythical = false
+    end
+end)
+
+Webhook:NewToggle("Exclusive", "Click to get notified when you hatch an Exclusive Pet", function(state)
+    if state then
+        exclusive = true
+    else
+        exclusive = false
+    end
+end)
+
 Webhook:NewTextBox("Paste your Discord Webhook", "Paste here", function(txt)
 	_G.Webhook = txt
 	_G.TrackList = {
    	['Basic'] = basic;
-	['Rare'] = false;
-	['Epic'] = false;
-	['Legendary'] = false;
-	['Mythical'] = false;
-	['Exclusive'] = false;
+	['Rare'] = rare;
+	['Epic'] = epic;
+	['Legendary'] = legendary;
+	['Mythical'] = mythical;
+	['Exclusive'] = exclusive;
 }
 		
 	loadstring(game:HttpGet('https://pastebin.com/raw/H9DyZWys'))()
