@@ -9,7 +9,7 @@ AutoFarmSection:NewToggle("Auto Collect orbs", "Teleport all the orbs to you", f
     if state then
         loadstring(game:HttpGet("https://raw.githubusercontent.com/PoloISFAT/FuzeHub/main/autocollect"))()
     else
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/PoloISFAT/FuzeHub/main/disableautocollect?token=GHSAT0AAAAAAB3CE226JOK3L2JJRELUZEQMY3PZU5Q"))()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/PoloISFAT/FuzeHub/main/disableautocollect"))()
     end
 end)
 
