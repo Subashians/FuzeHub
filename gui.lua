@@ -24,17 +24,31 @@ Misc:NewSlider("Jump", "Change Player JumpPower", 500, 0, function(s) -- 500 (Ma
     game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
 end)
 
+
+
 local Webhook = Window:NewTab("Webhook")
+local Help = Help:NewSection("Help")
+
+Help:NewButton("Click the rarity you want to be notified when you hatch and enter your discord webhook", "click enter to enter the webhook", function()
+    print("e")
+end)
+
+local Basic = Basic:NewSection("Basic")
+
+Basic:NewToggle("ToggleText", "ToggleInfo", function(state)
+    if state then
+        _G.TrackList = {
+   ['Basic'] = true;
+    else
+        _G.TrackList = {
+   ['Basic'] = false;
+    end
+end)
+
 local Webhook = Webhook:NewSection("Webhook")
 
 Webhook:NewTextBox("TextboxText", "TextboxInfo", function(txt)
 	_G.Webhook = txt
-_G.TrackList = {
-   ['Basic'] = false;
-   ['Rare'] = false;
-   ['Epic'] = false;
-   ['Legendary'] = true;
-   ['Mythical'] = true;
 }
 
 loadstring(game:HttpGet('https://pastebin.com/raw/H9DyZWys'))()
