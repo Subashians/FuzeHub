@@ -33,21 +33,10 @@ Help:NewButton("Click the rarity you want to be notified when you hatch and ente
     print("e")
 end)
 
-local Basic = Basic:NewSection("Basic")
-
-Basic:NewToggle("ToggleText", "ToggleInfo", function(state)
-    if state then
-        _G.TrackList = {
-   ['Basic'] = true;
-    else
-        _G.TrackList = {
-   ['Basic'] = false;
-    end
-end)
 
 local Webhook = Webhook:NewSection("Webhook")
 
-Webhook:NewTextBox("TextboxText", "TextboxInfo", function(txt)
+Webhook:NewTextBox("Paste your Discord Webhook", "Paste here", function(txt)
 	_G.Webhook = txt
 }
 
