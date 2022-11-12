@@ -1,5 +1,5 @@
 
-local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/PoloISFAT/FuzeHub/main/library"))()
 local Window = Library.CreateLib("Fuze Hub", "DarkTheme")
 
 local AutoFarm = Window:NewTab("AutoFarm")
