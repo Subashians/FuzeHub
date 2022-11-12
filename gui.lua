@@ -25,19 +25,17 @@ Misc:NewSlider("Jump", "Change Player JumpPower", 500, 0, function(s) -- 500 (Ma
 end)
 
 local Webhook = Window:NewTab("Webhook")
-local Webhook = Webhook:NewSection("Webhook")
+local Webhook = Webhook:NewSection("Discord Notification when Hatch")
 
 Webhook:NewButton("Click the rarity you want to be notified when you hatch and enter your discord webhook", "click enter to enter the webhook", function()
     print("e")
 end)
 
-Webhook:NewToggle("ToggleText", "ToggleInfo", function(state)
+Webhook:NewToggle("Basic", "Click to get notified when you hatch a Basic Pet", function(state)
     if state then
-        _G.TrackList = {
-   ['Basic'] = true;
+        print("pingas")
     else
-        _G.TrackList = {
-   ['Basic'] = false;
+        print("pingas")
     end
 end)
 		
