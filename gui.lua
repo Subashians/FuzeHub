@@ -25,7 +25,7 @@ Misc:NewSlider("Jump", "Change Player JumpPower", 500, 0, function(s) -- 500 (Ma
 end)
 
 local Webhook = Window:NewTab("Webhook")
-local Webhook = Misc:NewSection("Webhook")
+local Webhook = Webhook:NewSection("Webhook")
 
 Webhook:NewTextBox("TextboxText", "TextboxInfo", function(txt)
 	_G.Webhook = txt
