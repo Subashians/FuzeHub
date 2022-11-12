@@ -1,0 +1,29 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Fuze Hub", "DarkTheme")
+
+local Section = Tab:NewSection("Credits")
+Section:NewButton("Made by Commentuto", "Go sub to me :D", function()
+    print("E")
+end)
+
+Section:NewButton("Join the discord: ", "Go sub to me :D", function()
+    print("E")
+end)
+
+local Section = Tab:NewSection("AutoFarm")
+Section:NewToggle("Auto Collect orbs", "Teleport all the orbs to yoy", function(state)
+    if state then
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/PoloISFAT/FuzeHub/main/autocollect?token=GHSAT0AAAAAAB3CE226F4WWJEZXLCFIFH6EY3PP6DQ"))()
+    else
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/PoloISFAT/FuzeHub/main/disableautocollect?token=GHSAT0AAAAAAB3CE226R5DEE3L223JRKCMKY3PP7VQ"))()
+    end
+end)
+
+local Section = Tab:NewSection("Misc")
+Section:NewSlider("Speed", "Change Player Walkspeed", 500, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+
+Section:NewSlider("Jump", "Change Player JumpPower", 500, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+end)
