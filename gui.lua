@@ -2,6 +2,13 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/PoloISFAT/FuzeHub/main/library"))()
 local Window = Library.CreateLib("Fuze Hub", "DarkTheme")
 
+local Credits = Window:NewTab("Credits")
+local Credits = Credits:NewSection("Made by Commentuto")
+
+Credits:NewButton("Click to copy the discord link!", "https://discord.gg/5bgkB4dDd9", function()
+    setclipboard("https://discord.gg/5bgkB4dDd9")
+end)
+
 local AutoFarm = Window:NewTab("AutoFarm")
 local AutoFarmSection = AutoFarm:NewSection("AutoFarm")
 
