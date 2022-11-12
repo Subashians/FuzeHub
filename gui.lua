@@ -2,6 +2,8 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/PoloISFAT/FuzeHub/main/library"))()
 local Window = Library.CreateLib("Fuze Hub", "DarkTheme")
 
+local basic = true
+
 local AutoFarm = Window:NewTab("AutoFarm")
 local AutoFarmSection = AutoFarm:NewSection("AutoFarm")
 
