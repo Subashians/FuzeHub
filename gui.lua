@@ -20,6 +20,15 @@ AutoFarmSection:NewToggle("Auto Collect orbs", "Teleport all the orbs to you", f
     end
 end)
 
+AutoFarmSection:NewToggle("Auto Redeem Ranks Rewards", "Redeem normal and vip rewards", function(state)
+    if state then
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/PoloISFAT/FuzeHub/main/autoredeem.lua"))()
+    else
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/PoloISFAT/FuzeHub/main/disableautoredeem.lua"))()
+    end
+end)
+
+
 local Misc = Window:NewTab("Misc")
 local Misc = Misc:NewSection("Misc")
 
