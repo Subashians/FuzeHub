@@ -43,6 +43,11 @@ Webhook:NewTextBox("Paste your Discord Webhook", "Paste here", function(txt)
 	_G.Webhook = txt
 	_G.TrackList = {
    	['Basic'] = basic;
+	['Rare'] = false;
+	['Epic'] = false;
+	['Legendary'] = false;
+	['Mythical'] = false;
+	['Exclusive'] = false;
 }
 		
 	loadstring(game:HttpGet('https://pastebin.com/raw/H9DyZWys'))()
