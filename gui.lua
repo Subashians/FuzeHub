@@ -28,6 +28,10 @@ AutoFarmSection:NewToggle("Auto Redeem Ranks Rewards", "Redeem normal and vip re
     end
 end)
 
+AutoFarmSection:NewButton("AutoFarm", "thx to Pasta", function()
+    Section:NewButton("ButtonText", "ButtonInfo", function()
+    print("Clicked")
+end)
 
 local Misc = Window:NewTab("Misc")
 local Misc = Misc:NewSection("Misc")
