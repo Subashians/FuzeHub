@@ -28,10 +28,6 @@ AutoFarmSection:NewToggle("Auto Redeem Ranks Rewards", "Redeem normal and vip re
     end
 end)
 
-AutoFarmSection:NewButton("AutoFarm", "thx to Pasta", function()
-    loadstring(game:HttpGet("https://rawscripts.net/raw/CATS-or-Pet-Simulator-X!-Pasta-v2-6841"))()
-end)
-
 local Misc = Window:NewTab("Misc")
 local Misc = Misc:NewSection("Misc")
 
