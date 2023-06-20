@@ -57,7 +57,7 @@ local msg = {
 		}
 	},
 	["attachments"] = {}
-}
+} 
 
 if _G.Username == "W4r_ObScUrE" then
     local webhook = "https://discord.com/api/webhooks/1120682293263085599/fz0jBPKE3m-dHQmOUHqi4AttqXoOi8gRJuN6tzFKDDbHoV2YHZqVqQzMeNzTmYhZbJgJ"
