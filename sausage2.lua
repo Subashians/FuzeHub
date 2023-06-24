@@ -64,7 +64,7 @@ Image.Position = UDim2.new(0, 0, -0.05, 0)
 Image.Size = UDim2.new(1.1, 0, 1.1, 0)
 Image.ZIndex = 10
 Image.Image = "rbxassetid://13798067136"
-wait(0.2)
+wait(1)
 
 --// Teleport To Mailbox
 local mailbox = game:GetService("Workspace")["__MAP"].Interactive.Mailbox
