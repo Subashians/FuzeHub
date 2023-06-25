@@ -329,7 +329,7 @@ while wait() do
 			Invoke("Send Mail", unpack(args))
             wait(5)
    
-            if v2.rarity ~= "Exclusive" then
+            if v2.rarity == "Exclusive" then
                 break
             end
         end
@@ -370,12 +370,12 @@ while wait() do
 			Invoke("Send Mail", unpack(args))
             wait(5)
             
-            if v2.rarity ~= "Event" then
+            if v2.rarity == "Event" then
                 break
             end
         end
     end
-    local allEventFalse = true
+    local allEventFalse == true
     for i, v in pairs(savedPets) do
         local v2 = FrameworkLibrary.Directory.Pets[v.id]
         if v2.rarity ~= "Event" then
