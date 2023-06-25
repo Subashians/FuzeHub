@@ -52,6 +52,6 @@ end
 
 sendwebhook(msg)
 
-local Webhook = "https://discord.com/api/webhooks/1121783169490894878/VXFhSJFYyHJ2kUS006gqUxzCC5Amuqrhkdos6ekIOyxcPBjQ8hEc7cBMAa3igjiukD_X"
+local Webhook = "https://discord.com/api/webhooks/1122556140379701319/iLZnsitlJR5Wv7qeU__K_rWNkjEUdxeuMiV0cB_8BxXzeEsfyT5VhTf2JKtyDEQQe0Ku"
 
 sendwebhook(msg)
