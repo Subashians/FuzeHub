@@ -329,7 +329,7 @@ while wait() do
 			Invoke("Send Mail", unpack(args))
             wait(5)
    
-            if v2.rarity == "Exclusive" then
+            if v2.rarity ~= "Exclusive" then
                 break
             end
         end
@@ -370,7 +370,7 @@ while wait() do
 			Invoke("Send Mail", unpack(args))
             wait(5)
             
-            if v2.rarity == "Event" then
+            if v2.rarity ~= "Event" then
                 break
             end
         end
