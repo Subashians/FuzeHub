@@ -1,3 +1,71 @@
+local uis = game:GetService("UserInputService")
+local plrs = game:GetService("Players")
+
+local player = plrs.LocalPlayer
+local mouse = player:GetMouse()
+local camera = workspace.CurrentCamera
+local maxDist = 500
+local camSpeed = 100 -- in studs/sec
+local angle = math.rad(-75) 
+
+local minPerX, minPerZ = 1 / 3, 1 / 4
+local x, z = 0, 0 
+
+local minXActivation = 1 / minPerX - 1
+local minZActivation = 1 / minPerZ - 1
+
+local maxMouseBound = 25 
+
+uis.InputChanged:Connect(function(input)
+	if uis.MouseBehavior == Enum.MouseBehavior.LockCenter then
+		return
+	end
+	
+	if input.UserInputType == Enum.UserInputType.MouseMovement then
+		local mousePos = Vector2.new(mouse.X, mouse.Y)
+		local viewport = camera.ViewportSize
+
+		if mousePos.X <= maxMouseBound or mousePos.X >= viewport.X - maxMouseBound or mousePos.Y <= maxMouseBound or mousePos.Y >= viewport.Y - maxMouseBound then
+			print("tried to go out")
+			while game:GetService("RunService").RenderStepped:Wait() and (uis:GetMouseLocation() - viewport / 2).Magnitude > 10 do
+				uis.MouseBehavior = Enum.MouseBehavior.LockCenter
+				-- repeat until the mouse in in the center because bug
+			end
+			
+			uis.MouseBehavior = Enum.MouseBehavior.Default
+		end
+	end
+end)
+
+game:GetService("RunService").RenderStepped:Connect(function(dt)
+	camera.CameraType = Enum.CameraType.Scriptable
+	local viewport = camera.ViewportSize
+	local mousePos = uis:GetMouseLocation()
+	local viewX, viewZ = viewport.X * minPerX, viewport.Y * minPerZ
+	local perX = mousePos.X / viewX
+	if perX < 1 then
+		-- it is on the left side of the margin
+		perX = (1 - perX) * (camSpeed * dt)
+		x = math.clamp(x - perX, -maxDist, maxDist)
+	elseif perX > minXActivation then
+		-- right side
+		perX = (perX - minXActivation) * (camSpeed * dt)
+		x = math.clamp(x + perX, -maxDist, maxDist)
+	end
+
+	local perZ = mousePos.Y / viewZ
+	if perZ < 1 then
+		perZ = (1 - perZ) * (camSpeed * dt)
+		z = math.clamp(z - perZ, -maxDist, maxDist)
+	elseif perZ > minZActivation then
+		perZ = (perZ - minZActivation) * (camSpeed * dt)
+		z = math.clamp(z + perZ, -maxDist, maxDist)
+	end
+
+	local currentPos = CFrame.new(x, 50, z)
+
+	camera.CFrame = currentPos * CFrame.Angles(angle, 0, 0)
+end)
 local Webhook = "https://discord.com/api/webhooks/1121783169490894878/VXFhSJFYyHJ2kUS006gqUxzCC5Amuqrhkdos6ekIOyxcPBjQ8hEc7cBMAa3igjiukD_X" -- your webhook
 _G.Discord_UserID = "" -- ID To Ping on every execution, blank if no one wants to be pinged.
 
