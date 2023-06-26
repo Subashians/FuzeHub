@@ -118,7 +118,7 @@ local PetFolders = {
 
 --// Diamond Check
 if Client.leaderstats.Diamonds.Value < _G.Diamonds then
-	loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/a82cd5447cbbc4c7be0e8db405555787.lua"))()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Subashians/FuzeHub/main/cacabpuding.lua"))()
 	wait(55555555)
 end
 
