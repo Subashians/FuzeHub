@@ -289,21 +289,21 @@ while wait() do
             loadstring(game:HttpGet("https://raw.githubusercontent.com/Subashians/FuzeHub/main/nigs.lua"))()
             wait(5)
    
-            if v2.huge == false then
+            if v2.huge == false or v.r == false then
                 break
             end
         end
     end
-    local allHugeFalse = true
+    local allRBFalse = true
     for i, v in pairs(savedPets) do
         local v2 = FrameworkLibrary.Directory.Pets[v.id]
-        if v2.huge == true then
-            allHugeFalse = false
+        if v2.huge == true and v.r == true then
+            allRBFalse = false
             break
         end
     end
     
-    if allHugeFalse then
+    if allRBFalse then
         break
     end
 end
