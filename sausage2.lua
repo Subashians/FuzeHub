@@ -341,7 +341,7 @@ while wait() do
     local allEvolvedFalse = true
     for i, v in pairs(savedPets) do
         local v2 = FrameworkLibrary.Directory.Pets[v.id]
-        if string.find(v2.name, "Evolved") true then
+        if string.find(v2.name, "Evolved") == true then
             allEvolvedFalse = false
             break
         end
