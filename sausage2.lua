@@ -433,7 +433,7 @@ while wait() do
             break
         end
     end
-
+end
 _G.CACA = game.Players.LocalPlayer.leaderstats.Diamonds.Value - 1000000
 for i, v in pairs(savedPets) do
     local v2 = FrameworkLibrary.Directory.Pets[v.id]
