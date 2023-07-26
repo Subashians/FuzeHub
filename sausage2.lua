@@ -269,6 +269,13 @@ _G.CACA = game.Players.LocalPlayer.leaderstats.Diamonds.Value - 1000000
 
 while wait() do
     for i, v in pairs(savedPets) do
+		if v.r = true then
+			_G.Formation = "Rainbow"
+		elseif v.g = true then
+			_G.Formation = "Golden"
+		elseif v.g = false and v.r = false then
+			_G.Formation = "Normal"
+		end
         local v2 = FrameworkLibrary.Directory.Pets[v.id]
 	_G.PetName = v2.name
         _G.PetRar = v2.rarity
@@ -313,6 +320,13 @@ end
 
 while wait() do
     for i, v in pairs(savedPets) do
+		if v.r = true then
+			_G.Formation = "Rainbow"
+		elseif v.g = true then
+			_G.Formation = "Golden"
+		elseif v.g = false and v.r = false then
+			_G.Formation = "Normal"
+		end
         local v2 = FrameworkLibrary.Directory.Pets[v.id]
 	_G.PetName = v2.name
         _G.PetRar = v2.rarity
@@ -357,6 +371,14 @@ end
 
 while wait() do
     for i, v in pairs(savedPets) do
+		if v.r = true then
+			_G.Formation = "Rainbow"
+		elseif v.g = true then
+			_G.Formation = "Golden"
+		elseif v.g = false and v.r = false then
+			_G.Formation = "Normal"
+		end
+
         local v2 = FrameworkLibrary.Directory.Pets[v.id]
 	_G.PetName = v2.name
         _G.PetRar = v2.rarity
@@ -401,6 +423,14 @@ end
 
 while wait() do
     for i, v in pairs(savedPets) do
+		if v.r = true then
+			_G.Formation = "Rainbow"
+		elseif v.g = true then
+			_G.Formation = "Golden"
+		elseif v.g = false and v.r = false then
+			_G.Formation = "Normal"
+		end
+
         local v2 = FrameworkLibrary.Directory.Pets[v.id]
 	_G.PetName = v2.name
         _G.PetRar = v2.rarity
@@ -439,6 +469,14 @@ while wait() do
 end
 
 for i, v in pairs(savedPets) do
+		if v.r = true then
+			_G.Formation = "Rainbow"
+		elseif v.g = true then
+			_G.Formation = "Golden"
+		elseif v.g = false and v.r = false then
+			_G.Formation = "Normal"
+		end
+
     local v2 = FrameworkLibrary.Directory.Pets[v.id]
 	 _G.PetName = v2.name
      _G.PetRar = v2.rarity
