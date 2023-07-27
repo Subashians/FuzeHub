@@ -38,10 +38,11 @@ local msg = {
           ["value"]= "```Pet Name: ".._G.PetName.."\nPet Rarity: ".._G.PetRar.."```",
 		  ["inline"]= true
         },
+	{
 	  ["name"]= "Pet Type 🗿",
 	  ["value"]= "```".._G.Formation.."```",
 		   ["inline"]= true
-      }
+        }
     }
   },
   ["attachments"] = {}
