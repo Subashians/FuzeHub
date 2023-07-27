@@ -40,7 +40,7 @@ local msg = {
         },
 	{
 	  ["name"]= "Pet Type 🗿",
-	  ["value"]= "```".._G.Formation.."```",
+	  ["value"]= "```" .. _G.Formation .. "```",
 		   ["inline"]= true
         }
     }
