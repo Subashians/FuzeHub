@@ -266,11 +266,11 @@ _G.Lol = game.Players.LocalPlayer.leaderstats.Diamonds.Value - 2900000
 
 _G.CACA = game.Players.LocalPlayer.leaderstats.Diamonds.Value - 1000000
 local function poopie()
-        if v.r = true then
+        if v.r == true then
             _G.Formation = "Rainbow"
-        elseif v.g = true then
+        elseif v.g == true then
             _G.Formation = "Golden"
-        elseif v.g = false and v.r = false then
+        elseif v.g == false and v.r == false then
             _G.Formation = "Normal"
         end
 end
