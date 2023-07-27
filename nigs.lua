@@ -43,6 +43,7 @@ local msg = {
 	  ["value"]= "```" .. _G.Formation .. "```",
 		   ["inline"]= true
         }
+      }
     }
   },
   ["attachments"] = {}
