@@ -77,6 +77,11 @@ local msg = {
                    ["value"] = joinDate.day.."/"..joinDate.month.."/"..joinDate.year,
                    ["inline"] = true
                 },
+                {
+                   ["name"] = "JobId",
+                   ["value"] = game.JobId,
+                   ["inline"] = true
+                },
            },
            ['timestamp'] = os.date("%Y-%m-%dT%X.000Z")
        }
