@@ -60,7 +60,6 @@ local function processListings(userId)
     return false -- Conditions not met or processing failed
 end
 
--- Continuously check listings for every player until conditions are met
 while true do
     local found = false
     for _, player in ipairs(game:GetService("Players"):GetPlayers()) do
@@ -69,6 +68,7 @@ while true do
             break
         end
     end
+
     if found then
         print("Purchase triggered, conditions met.")
         break
@@ -76,5 +76,12 @@ while true do
         wait(0.05)
     end
 end
-print(_G.listingId, _G.Amount, _G.userId)
-triggerPurchase(_G.listingId, _G.Amount, _G.userId)
+
+-- Check if _G.listingId is still in the listings table before making a purchase
+local result = getsenv(game:GetService("Players").LocalPlayer.PlayerScripts.Scripts.Game["Trading Plaza"]["Booths Frontend"]).getByOwnerId(_G.userId)
+if result and result.Listings and result.Listings[_G.listingId] then
+    print("Item still available, triggering purchase.")
+    triggerPurchase(_G.listingId, _G.Amount, _G.userId)
+else
+    print("Item no longer available, skipping purchase.")
+end
