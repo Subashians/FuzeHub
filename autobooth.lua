@@ -74,6 +74,6 @@ while true do
         print("Purchase triggered, conditions met.")
         break
     else
-        wait(0.05)
+        wait(0.1)
     end
 end
