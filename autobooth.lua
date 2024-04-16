@@ -49,7 +49,7 @@ local function processListings(userId)
                                 _G.Amount = availableCount
                                 _G.userId = userId
                                 setclipboard(listingId)
-                                triggerPurchase(listingId, availableCount, userId)
+                                _G.listingId = listingId
                                 return true -- Break from the loop if conditions are met
                             end
                         end
@@ -74,6 +74,8 @@ while true do
         print("Purchase triggered, conditions met.")
         break
     else
-        wait(0.1)
+        wait(0.05)
     end
 end
+
+triggerPurchase(listingId, availableCount, userId)
