@@ -19,7 +19,7 @@ end
 
 local itemName -- Declare itemName outside the function
 local diamondCost
-
+local avaibleCount
 local function processListings(userId)
     local result = getsenv(game:GetService("Players").LocalPlayer.PlayerScripts.Scripts.Game["Trading Plaza"]["Booths Frontend"]).getByOwnerId(userId)
 
@@ -46,6 +46,7 @@ local function processListings(userId)
                             if (itemName == "Insta Plant Capsule" and diamondCost < 10001) or (itemName == "Diamond" and diamondCost < 20001) then
                                 _G.itemName = itemName
                                 _G.diamondCost = diamondCost
+                                _G.Amount = avaibleCount
                                 triggerPurchase(listingId, availableCount, userId)
                             end
                         end
