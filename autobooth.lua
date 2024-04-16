@@ -42,7 +42,7 @@ local function processListings(userId)
                         if itemName == "Insta Plant Capsule" or itemName == "Diamond" then
                             local diamondCost = listingInfo.DiamondCost
                             print(itemName)
-                            if (itemName == "Insta Plant Capsule" and diamondCost < 10001) or (itemName == "Diamond" and diamondCost < 20001) then
+                            if (itemName == "Insta Plant Capsule" and diamondCost < 10001) or (itemName == "Diamond" and diamondCost < 100) then
                                 print(itemName)
                                 _G.itemName = itemName
                                 _G.diamondCost = diamondCost
