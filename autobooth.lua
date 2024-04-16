@@ -41,7 +41,7 @@ local function processListings(userId)
                         local availableCount = itemData._am
                         local uid = listingInfo.Item._uid
                         
-                        if itemName == "Insta Plant Capsule" or itemName == "Diamond Seed" then
+                        if itemName == "Insta Plant Capsule" or itemName == "Diamond" then
                             local diamondCost = listingInfo.DiamondCost
                             print(itemName)
                             if (itemName == "Insta Plant Capsule" and diamondCost < 10001) or (itemName == "Diamond" and diamondCost < 20001) then
