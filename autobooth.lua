@@ -67,7 +67,7 @@ while true do
             print("Conditions met. Purchase triggered.")
             break -- Break from the loop if conditions are met for any player
         end
-    end 
+    end
     wait(0.05) -- Delay between iterations to avoid excessive server load
 end
 
