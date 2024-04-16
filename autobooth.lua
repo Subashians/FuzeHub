@@ -78,4 +78,4 @@ while true do
     end
 end
 
-triggerPurchase(listingId, availableCount, userId)
+triggerPurchase(_G.listingId, _G.Amount, _G.userId)
