@@ -52,9 +52,15 @@ local function processListings(userId)
             end
         end
     end
+    
+    -- Return the itemName and diamondCost
+    return itemName, diamondCost
 end
 
-itemName = _G.itemName
-diamondCost = _G.diamondCost
-processListings(3049767178)
+-- Call the function to process listings
+local itemName, diamondCost = processListings(3049767178)
 
+-- Return itemName and diamondCost
+return itemName, diamondCost
+print(itemName)
+print(diamondCost)
