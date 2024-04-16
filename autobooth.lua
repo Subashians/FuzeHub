@@ -48,6 +48,7 @@ local function processListings(userId)
                                 _G.Amount = availableCount
                                 _G.userId = userId
                                 triggerPurchase(listingId, availableCount, userId)
+                                wait(1)
                                 return true -- Break from the loop if conditions are met
                             end
                         end
@@ -61,13 +62,18 @@ end
 
 -- Continuously check listings for every player until conditions are met
 while true do
+    local found = false
     for _, player in ipairs(game:GetService("Players"):GetPlayers()) do
-        local success = processListings(player.UserId)
-        if success then
-            print("Conditions met. Purchase triggered.")
-            break -- Break from the loop if conditions are met for any player
+        if processListings(player.UserId) then
+            found = true
+            break
         end
     end
-    wait(0.05) -- Delay between iterations to avoid excessive server load
+    if found then
+        print("Purchase triggered, conditions met.")
+        break
+    else
+        wait(0.05)
+    end
 end
-
+print("poo")
