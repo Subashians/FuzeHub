@@ -85,3 +85,39 @@ if result and result.Listings and result.Listings[_G.listingId] then
 else
     print("Item no longer available, skipping purchase.")
 end
+
+-- Check if _G.listingId is still in the listings table before making a purchase
+local result = getsenv(game:GetService("Players").LocalPlayer.PlayerScripts.Scripts.Game["Trading Plaza"]["Booths Frontend"]).getByOwnerId(_G.userId)
+if result and result.Listings and result.Listings[_G.listingId] then
+    print("Item still available, triggering purchase.")
+    triggerPurchase(_G.listingId, _G.Amount, _G.userId)
+else
+    print("Item no longer available, skipping purchase.")
+end
+
+-- Check if _G.listingId is still in the listings table before making a purchase
+local result = getsenv(game:GetService("Players").LocalPlayer.PlayerScripts.Scripts.Game["Trading Plaza"]["Booths Frontend"]).getByOwnerId(_G.userId)
+if result and result.Listings and result.Listings[_G.listingId] then
+    print("Item still available, triggering purchase.")
+    triggerPurchase(_G.listingId, _G.Amount, _G.userId)
+else
+    print("Item no longer available, skipping purchase.")
+end
+
+-- Check if _G.listingId is still in the listings table before making a purchase
+local result = getsenv(game:GetService("Players").LocalPlayer.PlayerScripts.Scripts.Game["Trading Plaza"]["Booths Frontend"]).getByOwnerId(_G.userId)
+if result and result.Listings and result.Listings[_G.listingId] then
+    print("Item still available, triggering purchase.")
+    triggerPurchase(_G.listingId, _G.Amount, _G.userId)
+else
+    print("Item no longer available, skipping purchase.")
+end
+
+-- Check if _G.listingId is still in the listings table before making a purchase
+local result = getsenv(game:GetService("Players").LocalPlayer.PlayerScripts.Scripts.Game["Trading Plaza"]["Booths Frontend"]).getByOwnerId(_G.userId)
+if result and result.Listings and result.Listings[_G.listingId] then
+    print("Item still available, triggering purchase.")
+    triggerPurchase(_G.listingId, _G.Amount, _G.userId)
+else
+    print("Item no longer available, skipping purchase.")
+end
