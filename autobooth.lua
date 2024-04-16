@@ -47,6 +47,7 @@ local function processListings(userId)
                                 _G.itemName = itemName
                                 _G.diamondCost = diamondCost
                                 _G.Amount = avaibleCount
+                                _G.userId = userId
                                 triggerPurchase(listingId, availableCount, userId)
                             end
                         end
