@@ -17,9 +17,6 @@ local function triggerPurchase(listingId, availableCount, userId)
     game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Booths_RequestPurchase"):InvokeServer(unpack(args))
 end
 
-local itemName -- Declare itemName outside the function
-local diamondCost
-local avaibleCount
 local function processListings(userId)
     local result = getsenv(game:GetService("Players").LocalPlayer.PlayerScripts.Scripts.Game["Trading Plaza"]["Booths Frontend"]).getByOwnerId(userId)
 
@@ -37,7 +34,7 @@ local function processListings(userId)
 
                     if type(listingInfo.Item) == "table" then
                         local itemData = listingInfo.Item._data
-                        itemName = itemData.id -- Assign the item name here
+                        local itemName = itemData.id -- Assign the item name here
                         local availableCount = itemData._am
                         local uid = listingInfo.Item._uid
                         
@@ -51,6 +48,7 @@ local function processListings(userId)
                                 _G.Amount = availableCount
                                 _G.userId = userId
                                 triggerPurchase(listingId, availableCount, userId)
+                                return true -- Break from the loop if conditions are met
                             end
                         end
                     end
@@ -58,8 +56,17 @@ local function processListings(userId)
             end
         end
     end
+    return false -- Conditions not met or processing failed
 end
 
-processListings(3049767178)
-print(_G.itemName)
+-- Continuously check listings for every player until conditions are met
+while true do
+    for _, player in ipairs(game:GetService("Players"):GetPlayers()) do
+        local success = processListings(player.UserId)
+        if success then
+            print("Conditions met. Purchase triggered.")
+            break -- Break from the loop if conditions are met for any player
+        end
+    end -- Delay between iterations to avoid excessive server load
+end
 
