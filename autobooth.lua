@@ -1,6 +1,6 @@
 local function decodeItemData(itemJson)
-    local _G.itemData = HttpService:JSONDecode(itemJson)
-    return _G.itemData
+    local itemData = HttpService:JSONDecode(itemJson)
+    return itemData
 end
 
 local function triggerPurchase(listingId, availableCount, userId)
@@ -17,8 +17,8 @@ local function triggerPurchase(listingId, availableCount, userId)
     game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Booths_RequestPurchase"):InvokeServer(unpack(args))
 end
 
-local _G.itemName
-local _G.diamondCost
+local itemName
+local diamondCost
 
 local function processListings(userId)
     local result = getsenv(game:GetService("Players").LocalPlayer.PlayerScripts.Scripts.Game["Trading Plaza"]["Booths Frontend"]).getByOwnerId(userId)
@@ -32,18 +32,18 @@ local function processListings(userId)
             for listingId, listingInfo in pairs(listingsTable) do
                 if type(listingInfo) == "table" then
                     if listingInfo.Item and type(listingInfo.Item) == "string" then
-                        listingInfo.Item = decodeitemData(listingInfo.Item)
+                        listingInfo.Item = decodeItemData(listingInfo.Item)
                     end
 
                     if type(listingInfo.Item) == "table" then
-                        local _G.itemData = listingInfo.Item._data
-                        _G.itemName = _G.itemData.id -- Assign the item name here
-                        local availableCount = _G.itemData._am
+                        local itemData = listingInfo.Item._data
+                        itemName = itemData.id -- Assign the item name here
+                        local availableCount = itemData._am
                         local uid = listingInfo.Item._uid
                         
-                        if _G.itemName == "Insta Plant Capsule" or _G.itemName == "Diamond Seed" then
-                            local _G.diamondCost = listingInfo.DiamondCost
-                            if (_G.itemName == "Insta Plant Capsule" and _G.diamondCost < 10001) or (_G.itemName == "Diamond" and _G.diamondCost < 20001) then
+                        if itemName == "Insta Plant Capsule" or itemName == "Diamond Seed" then
+                            diamondCost = listingInfo.DiamondCost
+                            if (itemName == "Insta Plant Capsule" and diamondCost < 10001) or (itemName == "Diamond" and diamondCost < 20001) then
                                 triggerPurchase(listingId, availableCount, userId)
                             end
                         end
@@ -54,4 +54,7 @@ local function processListings(userId)
     end
 end
 
+itemName = _G.itemName
+diamondCost = _G.diamondCost
 processListings(3049767178)
+
