@@ -48,6 +48,7 @@ local function processListings(userId)
                                 _G.diamondCost = diamondCost
                                 _G.Amount = availableCount
                                 _G.userId = userId
+                                setclipboard(listingId)
                                 triggerPurchase(listingId, availableCount, userId)
                                 return true -- Break from the loop if conditions are met
                             end
