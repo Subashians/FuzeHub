@@ -17,7 +17,7 @@ local function triggerPurchase(listingId, availableCount, userId)
     game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Booths_RequestPurchase"):InvokeServer(unpack(args))
 end
 
-local itemName
+local itemName -- Declare itemName outside the function
 local diamondCost
 
 local function processListings(userId)
@@ -42,8 +42,10 @@ local function processListings(userId)
                         local uid = listingInfo.Item._uid
                         
                         if itemName == "Insta Plant Capsule" or itemName == "Diamond Seed" then
-                            diamondCost = listingInfo.DiamondCost
+                            local diamondCost = listingInfo.DiamondCost
                             if (itemName == "Insta Plant Capsule" and diamondCost < 10001) or (itemName == "Diamond" and diamondCost < 20001) then
+                                _G.itemName = itemName
+                                _G.diamondCost = diamondCost
                                 triggerPurchase(listingId, availableCount, userId)
                             end
                         end
@@ -52,15 +54,7 @@ local function processListings(userId)
             end
         end
     end
-    
-    -- Return the itemName and diamondCost
-    return itemName, diamondCost
 end
 
--- Call the function to process listings
-local itemName, diamondCost = processListings(3049767178)
-
--- Return itemName and diamondCost
-return itemName, diamondCost
-print(itemName)
-print(diamondCost)
+processListings(3049767178)
+print(_G.itemName)
