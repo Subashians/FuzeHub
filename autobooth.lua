@@ -4,6 +4,7 @@ local function decodeItemData(itemJson)
 end
 
 local function triggerPurchase(listingId, availableCount, userId)
+    print("Triggering purchase with listingId:", listingId, "availableCount:", availableCount, "userId:", userId)
     if availableCount == nil then
         availableCount = 1
     end
@@ -48,7 +49,6 @@ local function processListings(userId)
                                 _G.Amount = availableCount
                                 _G.userId = userId
                                 triggerPurchase(listingId, availableCount, userId)
-                                wait(1)
                                 return true -- Break from the loop if conditions are met
                             end
                         end
@@ -76,4 +76,3 @@ while true do
         wait(0.05)
     end
 end
-print("poo")
