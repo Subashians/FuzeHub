@@ -46,7 +46,7 @@ local function processListings(userId)
                             if (itemName == "Insta Plant Capsule" and diamondCost < 10001) or (itemName == "Diamond" and diamondCost < 20001) then
                                 _G.itemName = itemName
                                 _G.diamondCost = diamondCost
-                                _G.Amount = avaibleCount
+                                _G.Amount = availableCount
                                 _G.userId = userId
                                 triggerPurchase(listingId, availableCount, userId)
                             end
@@ -60,3 +60,4 @@ end
 
 processListings(3049767178)
 print(_G.itemName)
+
