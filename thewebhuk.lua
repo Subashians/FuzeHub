@@ -1,5 +1,5 @@
     local msg = {
-        ["content"]= "**<@1130177212738449438>**",
+        ["content"]= "**@here**",
         ["embeds"]= {
           {
             ["title"]= "`You just got a new item!`",
@@ -26,7 +26,7 @@
 
     local request = http_request or request or HttpPost or syn.request
     request({
-        Url = "https://discord.com/api/webhooks/1230099979004022854/PWTRIz9hoJcQslYWBgZj-djdMbnf2EO5hxkUSUq9Jg5Pg-j8ECsop7TJ4y6op7LPEp6R", 
+        Url = _G.Webhook, 
         Method = "POST", 
         Headers = {["Content-Type"] = "application/json"}, 
         Body = game.HttpService:JSONEncode(msg)
