@@ -1,4 +1,4 @@
-funnid = _G.rbxid
+funnid = _G.rbxideez
 Asset = tonumber(string.match(funnid, "%d+"))
 local Size = "420x420"
 
