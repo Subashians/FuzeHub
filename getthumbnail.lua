@@ -1,4 +1,6 @@
 funnid = _G.image
+print(_G.image)
+print(funnid)
 Asset = tonumber(string.match(funnid, "%d+"))
 local Size = "420x420"
 
