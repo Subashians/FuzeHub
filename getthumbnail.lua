@@ -1,3 +1,4 @@
+print(_G.image)
 funnid = _G.image
 print(_G.image)
 print(funnid)
