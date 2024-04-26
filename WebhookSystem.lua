@@ -1,4 +1,5 @@
 local playeruser = game.Players.LocalPlayer.Name
+jobid = game.JobId
 local msg = {
         ["content"]= "**@here**",
         ["embeds"]= {
@@ -24,7 +25,12 @@ local msg = {
                 ["name"]= "**Pet Type 🐈**",
                 ["value"]= "**```".._G.type.."```**",
                 ["inline"]= true
-              }   
+              },
+              {
+                ["name"]= "**JobId 🎮**",
+                ["value"]= "**```"..jobid.."```**",
+                ["inline"]= true
+              }  
             },
             ["thumbnail"] = {
                 ["url"] = _G.thumbnail
