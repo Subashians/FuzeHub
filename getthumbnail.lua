@@ -1,5 +1,4 @@
 funnid = _G.image
-wait(0.5)
 Asset = tonumber(string.match(funnid, "%d+"))
 local Size = "420x420"
 
