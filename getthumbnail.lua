@@ -1,8 +1,5 @@
-print("nigga")
-print(_G.image)
 funnid = _G.image
-print(_G.image)
-print(funnid)
+wait(0.5)
 Asset = tonumber(string.match(funnid, "%d+"))
 local Size = "420x420"
 
